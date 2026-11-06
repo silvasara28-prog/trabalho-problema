@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de problemas | ReparaAí</title>
+  <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+
+  <main class="cartao">
+
+    <header class="cabecalho">
+      <a class="logo" href="painel.html">ReparaAí</a>
+      <nav class="menu">
+        <a href="painel.html" class="ativo">Painel de problemas</a>
+        <a href="custos.html">Custos</a>
+        <a href="index.html" class="sair">Sair</a>
+      </nav>
+    </header>
+
+    <section class="conteudo">
+      <h1>Painel de problemas</h1>
+      <p class="subtitulo">Veja o que precisa de conserto e atualize o andamento.</p>
+
+      <div class="filtros">
+        <div>
+          <label for="filtro-status">Status</label>
+          <select id="filtro-status">
+            <option>Todos</option>
+            <option>Pendente</option>
+            <option>Em andamento</option>
+            <option>Resolvido</option>
+          </select>
+        </div>
+        <div>
+          <label for="filtro-local">Local</label>
+          <input type="text" id="filtro-local" placeholder="Sala 5, banheiro, pátio...">
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Problema</th>
+            <th>Local</th>
+            <th>Data</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lâmpada queimada</td>
+            <td>Sala 5</td>
+            <td>03/11</td>
+            <td><span class="status pendente">Pendente</span></td>
+            <td><a class="btn-atualizar" href="atualizar.html">Atualizar status</a></td>
+          </tr>
+          <tr>
+            <td>Vazamento</td>
+            <td>Banheiro do térreo</td>
+            <td>28/10</td>
+            <td><span class="status andamento">Em andamento</span></td>
+            <td><a class="btn-atualizar" href="atualizar.html">Atualizar status</a></td>
+          </tr>
+          <tr>
+            <td>Carteira quebrada</td>
+            <td>Sala 8</td>
+            <td>15/10</td>
+            <td><span class="status resolvido">Resolvido</span></td>
+            <td><a class="btn-atualizar" href="atualizar.html">Atualizar status</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="painel.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Problemas da escola | ReparaAí</title>
+  <link rel="stylesheet" href="publico.css">
+</head>
+<body>
+
+  <main class="cartao">
+
+    <header class="cabecalho">
+      <a class="logo" href="publico.html">ReparaAí</a>
+      <nav class="menu">
+        <a href="publico.html" class="ativo">Problemas da escola</a>
+        <a href="sugestoes.html">Enviar sugestão</a>
+        <a href="index.html" class="entrar">Entrar</a>
+      </nav>
+    </header>
+
+    <section class="conteudo">
+      <h1>Problemas da escola</h1>
+      <p class="subtitulo">Veja o que está sendo consertado e o que já foi resolvido.</p>
+
+      <div class="totais">
+        <div class="total">
+          <p>Pendentes</p>
+          <strong>1</strong>
+        </div>
+        <div class="total">
+          <p>Em andamento</p>
+          <strong>1</strong>
+        </div>
+        <div class="total">
+          <p>Resolvidos</p>
+          <strong>1</strong>
+        </div>
+      </div>
+
+      <div class="filtro">
+        <label for="filtro-status">Status</label>
+        <select id="filtro-status">
+          <option>Todos</option>
+          <option>Pendente</option>
+          <option>Em andamento</option>
+          <option>Resolvido</option>
+        </select>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Problema</th>
+            <th>Local</th>
+            <th>Data</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lâmpada queimada</td>
+            <td>Sala 5</td>
+            <td>03/11</td>
+            <td><span class="status pendente">Pendente</span></td>
+          </tr>
+          <tr>
+            <td>Vazamento</td>
+            <td>Banheiro do térreo</td>
+            <td>28/10</td>
+            <td><span class="status andamento">Em andamento</span></td>
+          </tr>
+          <tr>
+            <td>Carteira quebrada</td>
+            <td>Sala 8</td>
+            <td>15/10</td>
+            <td><span class="status resolvido">Resolvido</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="publico.js"></script>
+</body>
+</html>

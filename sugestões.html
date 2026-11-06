@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enviar sugestão | ReparaAí</title>
+  <link rel="stylesheet" href="sugestões.css">
+</head>
+<body>
+
+  <main class="cartao">
+
+    <header class="cabecalho">
+      <a class="logo" href="publico.html">ReparaAí</a>
+      <nav class="menu">
+        <a href="publico.html">Problemas da escola</a>
+        <a href="sugestoes.html" class="ativo">Enviar sugestão</a>
+        <a href="index.html" class="entrar">Entrar</a>
+      </nav>
+    </header>
+
+    <section class="conteudo">
+      <h1>Sugestões do aluno</h1>
+      <p class="subtitulo">Conte como a escola pode melhorar. Não precisa de login.</p>
+
+      <p class="aviso" id="aviso" hidden>Sugestão enviada. Obrigado por ajudar a melhorar a escola.</p>
+
+      <form id="form-sugestao">
+        <div class="campo">
+          <label for="melhorar">O que pode ser melhorado?</label>
+          <textarea id="melhorar" placeholder="Ex.: faltam bebedouros no pátio" required></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="fazer">O que pode ser feito?</label>
+          <textarea id="fazer" placeholder="Ex.: instalar mais dois bebedouros" required></textarea>
+        </div>
+
+        <div class="duas-colunas">
+          <div class="campo">
+            <label for="nome">Nome (opcional)</label>
+            <input type="text" id="nome" placeholder="Seu nome">
+          </div>
+          <div class="campo">
+            <label for="turma">Turma (opcional)</label>
+            <input type="text" id="turma" placeholder="Ex.: 2º B">
+          </div>
+        </div>
+
+        <div class="botoes">
+          <button type="submit" class="btn">Enviar sugestão</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="sugestões.js"></script>
+</body>
+</html>

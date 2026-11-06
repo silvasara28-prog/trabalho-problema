@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custos | ReparaAí</title>
+  <link rel="stylesheet" href="custos.css">
+</head>
+<body>
+
+  <main class="cartao">
+
+    <header class="cabecalho">
+      <a class="logo" href="painel.html">ReparaAí</a>
+      <nav class="menu">
+        <a href="painel.html">Painel de problemas</a>
+        <a href="custos.html" class="ativo">Custos</a>
+        <a href="index.html" class="sair">Sair</a>
+      </nav>
+    </header>
+
+    <section class="conteudo">
+
+      <div class="titulo-linha">
+        <div>
+          <h1>Custos</h1>
+          <p class="subtitulo">Quanto a escola vai gastar com cada conserto.</p>
+        </div>
+        <a href="adicionar-custo.html" class="btn">Adicionar custo</a>
+      </div>
+
+      <div class="totais">
+        <div class="total">
+          <p>Total previsto</p>
+          <strong>R$ 645,00</strong>
+        </div>
+        <div class="total">
+          <p>Consertos com custo</p>
+          <strong>3</strong>
+        </div>
+      </div>
+
+      <table>
+        <tr>
+          <th>Problema</th>
+          <th>Item ou serviço</th>
+          <th>Status</th>
+          <th class="direita">Valor</th>
+        </tr>
+        <tr>
+          <td>Lâmpada queimada</td>
+          <td>Lâmpada nova</td>
+          <td><span class="status pendente">Pendente</span></td>
+          <td class="direita">R$ 15,00</td>
+        </tr>
+        <tr>
+          <td>Vazamento</td>
+          <td>Encanador e material</td>
+          <td><span class="status andamento">Em andamento</span></td>
+          <td class="direita">R$ 180,00</td>
+        </tr>
+        <tr>
+          <td>Porta danificada</td>
+          <td>Porta nova</td>
+          <td><span class="status pendente">Pendente</span></td>
+          <td class="direita">R$ 450,00</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* Cores da escola */
+:root {
+  --azul: #0b5c8e;
+  --verde: #1f7f4c;
+  --branco: #ffffff;
+  --fundo: #eef2f5;
+  --texto: #14262b;
+  --texto-suave: #4a5a60;
+  --borda: #cfd8dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Cartão branco com a faixa azul e verde no topo */
+.cartao {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cartao::before {
+  content: "";
+  display: block;
+  height: 14px;
+  background: linear-gradient(90deg, var(--azul) 50%, var(--verde) 50%);
+}
+
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+}
+
+.menu a {
+  color: var(--texto-suave);
+  text-decoration: none;
+}
+
+.menu a.ativo {
+  color: var(--texto);
+  font-weight: 600;
+  border-bottom: 2px solid var(--verde);
+}
+
+.menu a.sair {
+  color: var(--azul);
+}
+
+/* Conteúdo */
+.conteudo {
+  padding: 28px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+}
+
+.subtitulo {
+  margin: 0 0 24px;
+  color: var(--texto-suave);
+}
+
+/* Link de voltar */
+.voltar {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--azul);
+  text-decoration: none;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+/* Resumo do problema */
+.resumo {
+  margin-bottom: 24px;
+  padding: 12px 14px;
+  background: #f6f8f9;
+  border-radius: 8px;
+}
+
+.resumo p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.resumo p span:first-child {
+  color: var(--texto-suave);
+}
+
+/* Status */
+.status {
+  padding: 3px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pendente {
+  background: #f8dfa4;
+  color: #6b4a05;
+}
+
+/* Campos */
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--texto-suave);
+}
+
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--branco);
+  font: inherit;
+  color: var(--texto);
+}
+
+.campo textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Botões */
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn {
+  padding: 11px 22px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  background: var(--branco);
+  font: inherit;
+  color: var(--texto);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primario {
+  background: var(--azul);
+  border-color: var(--azul);
+  color: var(--branco);
+}

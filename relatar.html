@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrar problema – ReparaAí</title>
+  <link rel="stylesheet" href="relatar.css">
+</head>
+<body>
+  <main class="card card--wide">
+    <header class="topbar">
+      <a class="brand" href="relatar.html">ReparaAí</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="relatar.html" class="nav__link is-active" aria-current="page">Registrar problema</a>
+        <a href="meus-registros.html" class="nav__link">Meus registros</a>
+        <a href="index.html" class="nav__link nav__link--exit">Sair</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <h1 class="title title--left">Registrar problema</h1>
+      <p class="subtitle subtitle--left">Conte o que precisa de conserto na escola.</p>
+
+      <div id="aviso" class="alert" role="status" aria-live="polite" hidden></div>
+
+      <form id="form-problema" novalidate>
+        <div class="field">
+          <label for="tipo">Tipo do problema</label>
+          <input id="tipo" name="tipo" type="text" placeholder="Lâmpada queimada, carteira quebrada, vazamento..." autocomplete="off">
+          <p class="field__error" id="erro-tipo" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="local">Local</label>
+          <input id="local" name="local" type="text" placeholder="Sala 5, banheiro do térreo, pátio..." autocomplete="off">
+          <p class="field__error" id="erro-local" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" rows="4" placeholder="Explique o que aconteceu"></textarea>
+          <p class="field__error" id="erro-descricao" hidden></p>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="btn-cancelar" class="btn btn--outline">Cancelar</button>
+          <button type="submit" class="btn btn--primary">Enviar registro</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="relatar.js"></script>
+</body>
+</html>

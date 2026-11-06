@@ -1,0 +1,174 @@
+/* Cores da escola */
+:root {
+  --azul: #0b5c8e;
+  --verde: #1f7f4c;
+  --branco: #ffffff;
+  --fundo: #eef2f5;
+  --texto: #14262b;
+  --texto-suave: #4a5a60;
+  --borda: #cfd8dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Cartão branco com a faixa azul e verde no topo */
+.cartao {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cartao::before {
+  content: "";
+  display: block;
+  height: 14px;
+  background: linear-gradient(90deg, var(--azul) 50%, var(--verde) 50%);
+}
+
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+}
+
+.menu a {
+  color: var(--texto-suave);
+  text-decoration: none;
+}
+
+.menu a.ativo {
+  color: var(--texto);
+  font-weight: 600;
+  border-bottom: 2px solid var(--verde);
+}
+
+.menu a.sair {
+  color: var(--azul);
+}
+
+/* Conteúdo */
+.conteudo {
+  padding: 28px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+}
+
+.subtitulo {
+  margin: 0 0 24px;
+  color: var(--texto-suave);
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--borda);
+}
+
+th {
+  background: #f6f8f9;
+  color: var(--texto-suave);
+  font-weight: 400;
+}
+
+/* Status */
+.status {
+  padding: 3px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pendente {
+  background: #f8dfa4;
+  color: #6b4a05;
+}
+
+.andamento {
+  background: #cfe2f8;
+  color: #1b4f8a;
+}
+
+.resolvido {
+  background: #c8e8cf;
+  color: #14532d;
+}
+
+/* Filtros */
+.filtros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.filtros label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--texto-suave);
+}
+
+.filtros select,
+.filtros input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--branco);
+  font: inherit;
+  color: var(--texto);
+}
+
+/* Botão da tabela */
+.btn-atualizar {
+  padding: 8px 14px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--branco);
+  font: inherit;
+  color: var(--texto);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-atualizar:hover {
+  border-color: var(--azul);
+  color: var(--azul);
+}

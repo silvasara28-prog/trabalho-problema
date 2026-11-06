@@ -1,0 +1,146 @@
+/* ReparaAí – estilos compartilhados (azul, verde e branco) */
+:root {
+  --azul: #0b5c8e;
+  --azul-escuro: #084770;
+  --verde: #1f7f4c;
+  --verde-claro: #e6f4ec;
+  --branco: #ffffff;
+  --fundo: #eef2f5;
+  --texto: #14262b;
+  --texto-suave: #4a5a60;
+  --borda: #cfd8dd;
+  --erro: #b3261e;
+  --raio: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 16px;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* Cartão com faixa azul/verde no topo */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 570px;
+  margin: 0 auto;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.card--wide { max-width: 760px; }
+.card::before {
+  content: "";
+  display: block;
+  height: 14px;
+  background: linear-gradient(90deg, var(--azul) 50%, var(--verde) 50%);
+}
+
+/* Cabeçalho */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--borda);
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--texto);
+  text-decoration: none;
+}
+.nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.nav__link {
+  padding: 4px 0;
+  color: var(--texto-suave);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.nav__link:hover { color: var(--azul); }
+.nav__link.is-active {
+  color: var(--texto);
+  font-weight: 600;
+  border-bottom-color: var(--verde);
+}
+.nav__link--exit { color: var(--azul); }
+
+/* Conteúdo */
+.content { padding: 28px; }
+.title { margin: 0 0 4px; font-size: 1.5rem; font-weight: 600; }
+.title--left { text-align: left; }
+.subtitle { margin: 0 0 24px; color: var(--texto-suave); }
+
+/* Formulário */
+.field { margin-bottom: 18px; }
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--texto);
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+}
+.field textarea { resize: vertical; min-height: 96px; }
+.field input::placeholder,
+.field textarea::placeholder { color: #8a979c; }
+.field input:focus,
+.field textarea:focus {
+  outline: 3px solid rgba(11, 92, 142, 0.25);
+  border-color: var(--azul);
+}
+.field.has-error input,
+.field.has-error textarea { border-color: var(--erro); }
+.field__error { margin: 6px 0 0; font-size: 0.875rem; color: var(--erro); }
+
+/* Botões */
+.actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 8px; }
+.btn {
+  padding: 11px 22px;
+  font: inherit;
+  font-weight: 500;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda);
+  background: var(--branco);
+  color: var(--texto);
+  cursor: pointer;
+}
+.btn:focus-visible { outline: 3px solid rgba(11, 92, 142, 0.35); outline-offset: 2px; }
+.btn--outline:hover { border-color: var(--azul); color: var(--azul); }
+.btn--primary { background: var(--azul); border-color: var(--azul); color: var(--branco); }
+.btn--primary:hover { background: var(--azul-escuro); border-color: var(--azul-escuro); }
+
+/* Aviso de sucesso */
+.alert {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--verde-claro);
+  border: 1px solid var(--verde);
+  color: #14532d;
+}
+
+@media (max-width: 520px) {
+  .content { padding: 20px; }
+  .topbar { padding: 14px 20px; }
+  .actions { flex-direction: column-reverse; }
+  .btn { width: 100%; }
+}

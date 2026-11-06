@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atualizar status | ReparaAí</title>
+  <link rel="stylesheet" href="atualizar.css">
+</head>
+<body>
+
+  <main class="cartao">
+
+    <header class="cabecalho">
+      <a class="logo" href="painel.html">ReparaAí</a>
+      <nav class="menu">
+        <a href="painel.html" class="ativo">Painel de problemas</a>
+        <a href="custos.html">Custos</a>
+        <a href="index.html" class="sair">Sair</a>
+      </nav>
+    </header>
+
+    <section class="conteudo">
+      <a class="voltar" href="painel.html">← Voltar ao painel</a>
+
+      <h1>Atualizar status</h1>
+      <p class="subtitulo">Escolha o novo andamento deste problema.</p>
+
+      <div class="resumo">
+        <p><span>Problema</span> <span>Lâmpada queimada</span></p>
+        <p><span>Local</span> <span>Sala 5</span></p>
+        <p><span>Registrado em</span> <span>03/11</span></p>
+        <p><span>Status atual</span> <span class="status pendente">Pendente</span></p>
+      </div>
+
+      <form action="painel.html">
+        <div class="campo">
+          <label for="novo-status">Novo status</label>
+          <select id="novo-status">
+            <option>Pendente</option>
+            <option>Em andamento</option>
+            <option>Resolvido</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="observacao">Observação (opcional)</label>
+          <textarea id="observacao"></textarea>
+        </div>
+
+        <div class="botoes">
+          <a href="painel.html" class="btn">Cancelar</a>
+          <button type="submit" class="btn btn-primario">Salvar status</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>
